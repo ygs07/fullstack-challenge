@@ -1,5 +1,7 @@
 <?php
 
+use App\Http\Controllers\API\UserController;
+use App\Jobs\UpdateWeatherData;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 
@@ -14,9 +16,4 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return response()->json([
-        'message' => 'all systems are a go',
-        'users' => \App\Models\User::all(),
-    ]);
-});
+Route::resource('/users', UserController::class);
