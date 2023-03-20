@@ -1,9 +1,11 @@
 <script setup lang="ts">
-import ApiTest from "@/components/ApiTest.vue";
+import WeatherReportsListing from "../components/WeatherReportsListing.vue";
 </script>
 
 <template>
   <main>
-    <api-test></api-test>
+    <v-container fluid>
+      <weather-reports-listing />
+    </v-container>
   </main>
 </template>
